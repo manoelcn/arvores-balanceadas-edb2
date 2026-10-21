@@ -61,8 +61,6 @@ Chave a inserir: 42
 | `make testes` | Compila `bin/testes` (se precisar) e executa a suíte no terminal. |
 | `make experimento` | Compila `bin/experimento` (se precisar) e imprime o CSV no terminal. |
 | `make resultados` | Executa testes e experimentos e grava arquivos em `docs/resultados/`. |
-| `make slides` | Exporta `apresentacao/apresentacao.md` (Marp) para `apresentacao/apresentacao.pdf`. |
-| `make html-slides` | Gera `apresentacao/apresentacao.html` para preview no navegador. |
 | `make clean` | Remove executáveis e `*.o` em `bin/`. |
 
 
