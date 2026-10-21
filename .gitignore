@@ -40,9 +40,6 @@
 
 # Build directories
 bin/*
-!bin/logistica
-!bin/testes
-!bin/experimento
 build/
 Build/
 build-*/
@@ -70,9 +67,4 @@ vcpkg_installed/
 Testing/
 .cache/
 
-# Marp HTML de preview (o PDF é o entregável)
-docs/apresentacao.html
-apresentacao/*.html
-
-# O log de testes é evidência; *.log acima não deve escondê-lo
 !docs/resultados/testes.log
