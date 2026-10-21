@@ -107,7 +107,7 @@ Estado atual do repositório (código e documentação versionados):
 └── apresentacao/
 ```
 
-Os executáveis `bin/logistica`, `bin/testes` e `bin/experimento` são gerados por `make`. `bin/` é continua ignorado.
+Os executáveis `bin/logistica`, `bin/testes` e `bin/experimento` são gerados por `make`. `bin/` é ignorado.
 
 ### `src/`
 
