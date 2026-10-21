@@ -11,11 +11,7 @@ BINDIR   = bin
 DOCDIR   = docs
 
 TREE_SRC = $(SRCDIR)/avl.cpp $(SRCDIR)/rb.cpp
-MARP     ?= marp
-SLIDES   = apresentacao/apresentacao.md
-SLIDES_PDF = apresentacao/apresentacao.pdf
-
-.PHONY: all clean run logistica testes experimento resultados slides html-slides
+.PHONY: all clean run logistica testes experimento resultados
 
 all: logistica $(BINDIR)/testes $(BINDIR)/experimento
 
@@ -45,12 +41,6 @@ resultados: $(BINDIR)/testes $(BINDIR)/experimento
 	./$(BINDIR)/testes | tee $(DOCDIR)/resultados/testes.log
 	./$(BINDIR)/experimento > $(DOCDIR)/resultados/comparacao.csv
 	./$(BINDIR)/experimento --exemplos > $(DOCDIR)/resultados/exemplos.txt
-
-slides:
-	$(MARP) $(SLIDES) --pdf --allow-local-files --pdf-outlines -o $(SLIDES_PDF)
-
-html-slides:
-	$(MARP) $(SLIDES) --allow-local-files -o apresentacao/apresentacao.html
 
 clean:
 	rm -rf $(BINDIR)/*.o $(BINDIR)/logistica $(BINDIR)/testes $(BINDIR)/experimento
